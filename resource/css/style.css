@@ -259,6 +259,12 @@ table, th, td{
         transition: 0.5s;
     }
     
+    .Schedule .background:hover {
+        box-shadow: -10px 10px rgb(153, 153, 153);
+        margin-top: -4px;
+        margin-left: 4px;
+        transition: 0.5s;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -361,20 +367,20 @@ table, th, td{
     }
 
     .Schedule {
-        margin-left: 3%;
+        margin-left: 1%;
         grid-row: 2 / span 1;
         font-family: "Josefin Sans", sans-serif;
     }
     
     .Schedule h2 {
         font-family: "Madimi One", sans-serif;
-        font-size: 40px;
+        font-size: 2rem;
         margin-bottom: 10px;
     }
     
     .Schedule .table {
         display: flex;
-        gap: 30px;
+        gap: 20px;
         flex-wrap: wrap;
     }
     
@@ -385,13 +391,14 @@ table, th, td{
     }
     
     .Schedule figure figcaption {
-        margin-left: 5%;
+        margin-left: 0%;
     }
     
     .Schedule .table table {
-        width: 15rem;
+        width: 95%;
+        height: 500px;
         box-sizing: border-box;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
     .Schedule figure img {
@@ -400,19 +407,19 @@ table, th, td{
     }
     
     .Schedule thead th:nth-child(1){
-        width: 5rem;
+        width: 100%;
         text-align: center;
         padding: 0.5rem;
     } 
     
     .Schedule tbody td:nth-child(1), .Schedule tbody td:nth-child(4) {
-        width: 4rem;
+        width: 35%;
         text-align: center;
         padding: 0.5rem;
     } 
     
     .Schedule tbody td:nth-child(2), .Schedule tbody td:nth-child(3) {
-        width: 3.5rem;
+        width: 15%;
         text-align: center;
     } 
     
@@ -420,20 +427,13 @@ table, th, td{
         margin-top: 10px;
         background-color: white;
         display: flex;
-        width: 20rem;
-        height: 40rem;
+        width: 95%;
+        height: 600px;
         border: white solid 1px;
-        border-radius: 30px;
+        border-radius: 10px;
         box-shadow: 12px -12px rgb(214, 214, 214);
         align-items: center;
         justify-content: center;
-    }
-    
-    .Schedule .background:hover {
-        box-shadow: -10px 10px rgb(153, 153, 153);
-        margin-top: -4px;
-        margin-left: 4px;
-        transition: 0.5s;
     }
     
     .Schedule .none {
@@ -441,22 +441,13 @@ table, th, td{
     }
     
     .Schedule .notstart td:nth-child(1), .Schedule .notstart td:nth-child(3) {
-        width: 4rem;
+        width: 35%;
         text-align: center;
         padding: 0.5rem;
     } 
     
     .Schedule .notstart td:nth-child(2){
-        width: 7rem;
+        width: 30%;
         text-align: center;
     } 
-    
-    .Schedule .time {
-        color: #1face9;
-        font-weight: bold;
-    }
-    
-    .Schedule .w {
-        background-color: rgb(144, 235, 9);
-    }
 }
