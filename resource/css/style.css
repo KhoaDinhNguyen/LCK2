@@ -302,16 +302,16 @@ table, th, td{
     }
 
     .Ranking table {
-        width: 80%;
+        width: 90%;
         height: auto;
     }
 
     .Ranking table thead th{
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .Ranking table tbody td{
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .Ranking thead th:nth-child(1) , .Ranking thead th:nth-child(4)  {
