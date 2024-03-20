@@ -5,7 +5,7 @@
 
 header {
     font-family: "Madimi One", sans-serif;
-    background-color: rgb(111, 236, 245);
+    background-color: rgb(89, 213, 224);
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -25,21 +25,79 @@ header figure figcaption {
     font-weight: bold;
     font-size: 2rem;
 }
-
 /**********************************************************/
 
 main {
     display: grid;
-    grid-template-rows: repeat(2, auto);
-    background-color: rgb(252, 252, 122);
+    grid-template-rows: repeat(3, auto);
+    background-color: rgb(245, 221, 97)
 }
 
+/*--------------------------MENU---------------------------*/
+
+ul{
+    background-color: rgb(255, 187, 187);
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+ul li {
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    position: relative;
+    width: 200px;
+}
+
+ul li p {
+    font-family: "Madimi One", sans-serif;
+}
+
+ul li:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+ul li ul.dropdown li {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    background-color: rgb(255, 187, 187);
+    display: none;
+    z-index: 10;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+ul.dropdown li:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*---------------------------------------------------------*/
+
+
+/**********************************************************/
+
+/**********************************************************/
 .Ranking {
     margin-top: 20px;
     margin-left: 3%;
     max-width: 50rem;
     height: 40rem;
-    grid-row: 1 / span 1;
+    grid-row: 2 / span 1;
     font-family: "Josefin Sans", sans-serif;
 }
 
@@ -79,6 +137,7 @@ table, th, td{
     border: black solid 1px;
     border-collapse: collapse;
     box-sizing: content-box;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .Ranking table {
@@ -95,11 +154,7 @@ table, th, td{
     font-size: 1rem;
 }
 
-.Ranking thead th:nth-child(1) {
-    width: 3rem;
-}
-
-.Ranking tbody td:nth-child(1) {
+.Ranking thead th:nth-child(1) , .Ranking tbody td:nth-child(1) {
     width: 3rem;
     text-align: center;
 }
@@ -114,29 +169,17 @@ table, th, td{
     text-align: left;
 }
 
-.Ranking thead th:nth-child(3) {
-    width: 4rem;
-}
-
-.Ranking tbody td:nth-child(3) {
+.Ranking thead th:nth-child(3), .Ranking tbody td:nth-child(3) {
     width: 4rem;
     text-align: center;
 }
 
-.Ranking thead th:nth-child(4) {
-    width: 3rem;
-}
-
-.Ranking tbody td:nth-child(4) {
+.Ranking thead th:nth-child(4), .Ranking tbody td:nth-child(4) {
     width: 3rem;
     text-align: center;
 }
 
-.Ranking thead th:nth-child(5) {
-    width: 5rem;
-}
-
-.Ranking tbody td:nth-child(5) {
+.Ranking thead th:nth-child(5), .Ranking tbody td:nth-child(5) {
     width: 5rem;
     text-align: center;
 } 
@@ -153,7 +196,7 @@ table, th, td{
 /************** NEW SECTION *******************************/
 .Schedule {
     margin-left: 3%;
-    grid-row: 2 / span 1;
+    grid-row: 3 / span 1;
     font-family: "Josefin Sans", sans-serif;
 }
 
@@ -220,13 +263,6 @@ table, th, td{
     justify-content: center;
 }
 
-.Schedule .background:hover {
-    box-shadow: -10px 10px rgb(153, 153, 153);
-    margin-top: -4px;
-    margin-left: 4px;
-    transition: 0.5s;
-}
-
 .Schedule .none {
     display: none;
 }
@@ -268,18 +304,25 @@ table, th, td{
 }
 
 @media only screen and (max-width: 500px) {
+    ul li {
+        font-size: 20px;
+        width: 80px;
+    }
+
+    ul li ul.dropdown li {
+        font-size: 16px;
+        margin-top: 2px;
+    }
+
+
     .Ranking {
         margin-top: 0;
         margin-left: 1%;
         width: 95%;
         height: auto;
-        padding: 10px;
-        grid-row: 1 / span 1;
-        font-family: "Josefin Sans", sans-serif;
     }
 
     .Ranking h2 {
-        font-family: "Madimi One", sans-serif;
         font-size: 2rem;
     }
 
@@ -295,16 +338,9 @@ table, th, td{
         padding-top: 10%;
         padding-bottom: 10%;
 
-        border: white solid 1px;
         border-radius: 10px;
 
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
         box-shadow: -10% 10% rgb(214, 214, 214);
-        box-sizing: border-box;
     }
 
     .Ranking table {
@@ -320,74 +356,37 @@ table, th, td{
         font-size: 12px;
     }
 
-    .Ranking thead th:nth-child(1) , .Ranking thead th:nth-child(4)  {
+    .Ranking thead th:nth-child(1) , .Ranking thead th:nth-child(4), .Ranking tbody td:nth-child(1), .Ranking tbody td:nth-child(4){
         width: 10%;
     }
 
-    .Ranking tbody td:nth-child(1) {
-        width: 10%;
-        text-align: center;
-    }
-
-    .Ranking thead th:nth-child(2) {
+    .Ranking thead th:nth-child(2), .Ranking tbody td:nth-child(2) {
         width: 50%;
-        text-align: center;
     }
 
-    .Ranking tbody td:nth-child(2) {
-        width: 50%;
-        text-align: left;
-    }
-
-    .Ranking thead th:nth-child(3) {
+    .Ranking thead th:nth-child(3), .Ranking tbody td:nth-child(3), .Ranking thead th:nth-child(5), .Ranking tbody td:nth-child(5)   {
         width: 15%;
     }
 
-    .Ranking tbody td:nth-child(3) {
-        width: 15%;
-        text-align: center;
-    }
-
-    .Ranking tbody td:nth-child(4) {
-        width: 10%;
-        text-align: center;
-    }
-
-    .Ranking thead th:nth-child(5) {
-        width: 15%;
-    }
-
-    .Ranking tbody td:nth-child(5) {
-        width: 15%;
-        text-align: center;
-    }
     .Ranking tfoot{
-        border: 2px white solid;
         font-size: 10px;
     }
 
     .Schedule {
         margin-left: 1%;
-        grid-row: 2 / span 1;
-        font-family: "Josefin Sans", sans-serif;
     }
     
     .Schedule h2 {
-        font-family: "Madimi One", sans-serif;
         font-size: 2rem;
         margin-bottom: 10px;
     }
     
     .Schedule .table {
-        display: flex;
         gap: 20px;
-        flex-wrap: wrap;
     }
     
     .Schedule figure{
-        display: flex;
-        align-items: center;
-        width: 3.5rem;
+        width: 70%;
     }
     
     .Schedule figure figcaption {
@@ -395,10 +394,9 @@ table, th, td{
     }
     
     .Schedule .table table {
-        width: 95%;
-        height: 500px;
-        box-sizing: border-box;
-        font-size: 1.2rem;
+        width: 80%;
+        height: auto;
+        font-size: 14px;
     }
     
     .Schedule figure img {
@@ -408,46 +406,33 @@ table, th, td{
     
     .Schedule thead th:nth-child(1){
         width: 100%;
-        text-align: center;
-        padding: 0.5rem;
+        padding: 1%;
     } 
     
     .Schedule tbody td:nth-child(1), .Schedule tbody td:nth-child(4) {
         width: 35%;
-        text-align: center;
-        padding: 0.5rem;
+        padding: 1%;
     } 
     
     .Schedule tbody td:nth-child(2), .Schedule tbody td:nth-child(3) {
         width: 15%;
-        text-align: center;
     } 
     
     .Schedule .background {
         margin-top: 10px;
-        background-color: white;
-        display: flex;
         width: 95%;
-        height: 600px;
-        border: white solid 1px;
+        height: auto;
+        padding: 20px 0px;
         border-radius: 10px;
         box-shadow: 12px -12px rgb(214, 214, 214);
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .Schedule .none {
-        display: none;
     }
     
     .Schedule .notstart td:nth-child(1), .Schedule .notstart td:nth-child(3) {
         width: 35%;
-        text-align: center;
         padding: 0.5rem;
     } 
     
     .Schedule .notstart td:nth-child(2){
         width: 30%;
-        text-align: center;
     } 
 }
