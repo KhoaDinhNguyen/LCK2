@@ -1,0 +1,438 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    font-family: "Madimi One", sans-serif;
+    background-color: rgb(89, 213, 224);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header figure img {
+    width: 3rem;
+    height: auto;
+}
+
+header figure{
+    display: flex;
+    align-items: center;
+}
+
+header figure figcaption {
+    font-weight: bold;
+    font-size: 2rem;
+}
+/**********************************************************/
+
+main {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    background-color: rgb(245, 221, 97)
+}
+
+/*--------------------------MENU---------------------------*/
+
+ul{
+    background-color: rgb(255, 187, 187);
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+ul li {
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    position: relative; /*Fucking this*/
+    width: 200px;
+}
+
+ul li p {
+    font-family: "Madimi One", sans-serif;
+}
+
+ul li:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+ul li ul.dropdown li {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    background-color: rgb(255, 187, 187);
+    display: none;
+    z-index: 10;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+ul.dropdown li:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*---------------------------------------------------------*/
+
+
+/**********************************************************/
+
+/**********************************************************/
+.Ranking {
+    margin-top: 20px;
+    margin-left: 3%;
+    max-width: 50rem;
+    height: 40rem;
+    grid-row: 2 / span 1;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.Ranking h2 {
+    font-family: "Madimi One", sans-serif;
+    font-size: 40px;
+}
+
+.Ranking img {
+    width: 15%;
+    height: auto;
+}
+
+.Ranking figure{
+    display: flex;
+    align-items: center;
+}
+
+.Ranking figure figcaption {
+    margin-left: 5%;
+}
+
+.Ranking .background {
+    margin-top: 10px;
+    background-color: white;
+    display: flex;
+    width: 35rem;
+    height: 35rem;
+    border: white solid 1px;
+    border-radius: 30px;
+    box-shadow: 12px -12px rgb(214, 214, 214);
+    align-items: center;
+    justify-content: center;
+}
+
+table, th, td{
+    border: black solid 1px;
+    border-collapse: collapse;
+    box-sizing: content-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.Ranking table {
+    width: 30rem;
+    height: 30rem;
+}
+
+.Ranking table thead th{
+    font-size: 1.3rem;
+    height: 2rem;
+}
+
+.Ranking table tbody td{
+    font-size: 1rem;
+}
+
+.Ranking thead th:nth-child(1) , .Ranking tbody td:nth-child(1) {
+    width: 3rem;
+    text-align: center;
+}
+
+.Ranking thead th:nth-child(2) {
+    width: 15rem;
+    text-align: center;
+}
+
+.Ranking tbody td:nth-child(2) {
+    width: 15rem;;
+    text-align: left;
+}
+
+.Ranking thead th:nth-child(3), .Ranking tbody td:nth-child(3) {
+    width: 4rem;
+    text-align: center;
+}
+
+.Ranking thead th:nth-child(4), .Ranking tbody td:nth-child(4) {
+    width: 3rem;
+    text-align: center;
+}
+
+.Ranking thead th:nth-child(5), .Ranking tbody td:nth-child(5) {
+    width: 5rem;
+    text-align: center;
+} 
+
+.Ranking .w {
+    background-color: rgb(171, 248, 57);
+}
+
+.Ranking tfoot{
+    border: 2px white solid;
+    font-size: 1.3rem;
+}
+
+/************** NEW SECTION *******************************/
+.Schedule {
+    margin-left: 3%;
+    grid-row: 3 / span 1;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.Schedule h2 {
+    font-family: "Madimi One", sans-serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.Schedule .table {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.Schedule figure{
+    display: flex;
+    align-items: center;
+    width: 3.5rem;
+}
+
+.Schedule figure figcaption {
+    margin-left: 5%;
+}
+
+.Schedule .table table {
+    width: 15rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.Schedule figure img {
+    width: 45%;
+    height: auto;
+}
+
+.Schedule thead th:nth-child(1){
+    width: 5rem;
+    text-align: center;
+    padding: 0.5rem;
+} 
+
+.Schedule tbody td:nth-child(1), .Schedule tbody td:nth-child(4) {
+    width: 4rem;
+    text-align: center;
+    padding: 0.5rem;
+} 
+
+.Schedule tbody td:nth-child(2), .Schedule tbody td:nth-child(3) {
+    width: 3.5rem;
+    text-align: center;
+} 
+
+.Schedule .background {
+    margin-top: 10px;
+    background-color: white;
+    display: flex;
+    width: 20rem;
+    height: 40rem;
+    border: white solid 1px;
+    border-radius: 30px;
+    box-shadow: 12px -12px rgb(214, 214, 214);
+    align-items: center;
+    justify-content: center;
+}
+
+.Schedule .none {
+    display: none;
+}
+
+.Schedule .notstart td:nth-child(1), .Schedule .notstart td:nth-child(3) {
+    width: 4rem;
+    text-align: center;
+    padding: 0.5rem;
+} 
+
+.Schedule .notstart td:nth-child(2){
+    width: 7rem;
+    text-align: center;
+} 
+
+.Schedule .time {
+    color: #1face9;
+    font-weight: bold;
+}
+
+.Schedule .w {
+    background-color: rgb(144, 235, 9);
+}
+
+@media only screen and (min-width: 500px) {
+    .Ranking .background:hover {
+        box-shadow: -20px 20px rgb(153, 153, 153);
+        margin-top: -4px;
+        margin-left: 4px;
+        transition: 0.5s;
+    }
+    
+    .Schedule .background:hover {
+        box-shadow: -10px 10px rgb(153, 153, 153);
+        margin-top: -4px;
+        margin-left: 4px;
+        transition: 0.5s;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    ul li {
+        font-size: 20px;
+        width: 80px;
+    }
+
+    ul li ul.dropdown li {
+        font-size: 16px;
+        margin-top: 2px;
+    }
+
+
+    .Ranking {
+        margin-top: 0;
+        margin-left: 1%;
+        width: 95%;
+        height: auto;
+    }
+
+    .Ranking h2 {
+        font-size: 2rem;
+    }
+
+    .Ranking figure figcaption {
+        margin-left: 0;
+    }
+
+    .Ranking .background {
+        width: 95%;
+        height: auto;
+
+        margin-top: 10px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+
+        border-radius: 10px;
+
+        box-shadow: -10% 10% rgb(214, 214, 214);
+    }
+
+    .Ranking table {
+        width: 90%;
+        height: auto;
+    }
+
+    .Ranking table thead th{
+        font-size: 14px;
+    }
+
+    .Ranking table tbody td{
+        font-size: 12px;
+    }
+
+    .Ranking thead th:nth-child(1) , .Ranking thead th:nth-child(4), .Ranking tbody td:nth-child(1), .Ranking tbody td:nth-child(4){
+        width: 10%;
+    }
+
+    .Ranking thead th:nth-child(2), .Ranking tbody td:nth-child(2) {
+        width: 50%;
+    }
+
+    .Ranking thead th:nth-child(3), .Ranking tbody td:nth-child(3), .Ranking thead th:nth-child(5), .Ranking tbody td:nth-child(5)   {
+        width: 15%;
+    }
+
+    .Ranking tfoot{
+        font-size: 10px;
+    }
+
+    .Schedule {
+        margin-left: 1%;
+    }
+    
+    .Schedule h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .Schedule .table {
+        gap: 20px;
+    }
+    
+    .Schedule figure{
+        width: 70%;
+    }
+    
+    .Schedule figure figcaption {
+        margin-left: 0%;
+    }
+    
+    .Schedule .table table {
+        width: 80%;
+        height: auto;
+        font-size: 14px;
+    }
+    
+    .Schedule figure img {
+        width: 45%;
+        height: auto;
+    }
+    
+    .Schedule thead th:nth-child(1){
+        width: 100%;
+        padding: 1%;
+    } 
+    
+    .Schedule tbody td:nth-child(1), .Schedule tbody td:nth-child(4) {
+        width: 35%;
+        padding: 1%;
+    } 
+    
+    .Schedule tbody td:nth-child(2), .Schedule tbody td:nth-child(3) {
+        width: 15%;
+    } 
+    
+    .Schedule .background {
+        margin-top: 10px;
+        width: 95%;
+        height: auto;
+        padding: 20px 0px;
+        border-radius: 10px;
+        box-shadow: 12px -12px rgb(214, 214, 214);
+    }
+    
+    .Schedule .notstart td:nth-child(1), .Schedule .notstart td:nth-child(3) {
+        width: 35%;
+        padding: 0.5rem;
+    } 
+    
+    .Schedule .notstart td:nth-child(2){
+        width: 30%;
+    } 
+}
